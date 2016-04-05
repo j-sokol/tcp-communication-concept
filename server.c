@@ -415,7 +415,8 @@ navigate_robot ( int connfd )
     }
     return 0;
 }
-static int receive_robot_message ( int connfd )
+static int 
+receive_robot_message ( int connfd )
 {
     char buf[BUFFSIZE];   
     int buflen;   
@@ -444,7 +445,8 @@ static int receive_robot_message ( int connfd )
     return 0;
 }
 
-static int handle_connection (int connfd)
+static int 
+handle_connection (int connfd)
 {
     if (authenticate_connection(connfd)) {
         close(connfd);   
@@ -467,7 +469,8 @@ static int handle_connection (int connfd)
     return 0;
 }
 
-static int init_server ()  
+static int 
+init_server ()  
 {   
     int fd;   
     int on = 1;   
@@ -506,7 +509,8 @@ static int init_server ()
     return fd;
 }
 
-static int server_loop (int listenfd)   
+static int 
+server_loop (int listenfd)   
 {   
     int connfd;   
     int pid;   
@@ -538,7 +542,8 @@ static int server_loop (int listenfd)
     return 0;
 }   
 
-int main(int argc, const char *argv[])
+int 
+main(int argc, const char *argv[])
 {
     server_loop(init_server());
     return 0;
