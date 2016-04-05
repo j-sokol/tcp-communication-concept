@@ -343,18 +343,18 @@ get_location (int connfd)
 static int 
 get_direction ( struct location * prev, struct location * actual )  /// AI logic
 {
-    if (actual->y == 0 && actual->x == 0) /// in right direction
+    if (actual->y == 0 && actual->x == 0) 
         return FORWARD; 
     if ((abs(actual->x) < abs(prev->x) && actual->x != 0) || (abs(actual->y) < abs(prev->y) && actual->y != 0))
         return FORWARD;
 
-    if (actual->x > 0 && actual->x > prev->x) /// in opposite direction
+    if (actual->x > 0 && actual->x > prev->x) 
         return LEFT; /// LEFT
-    if (actual->x < 0 && actual->x < prev->x) /// in opposite direction
+    if (actual->x < 0 && actual->x < prev->x) 
         return LEFT;
-    if (actual->y > 0 && actual->y > prev->y) /// in opposite direction
+    if (actual->y > 0 && actual->y > prev->y)
         return LEFT; /// LEFT
-    if (actual->y < 0 && actual->y < prev->y) /// in opposite direction
+    if (actual->y < 0 && actual->y < prev->y) 
         return LEFT; /// LEFT
 
     if (actual->x == 0 && actual->x < prev->x) /// in right direction
@@ -499,7 +499,7 @@ init_server ()
         close(fd);   
         return -1;   
     }   
-    /* announce you are willing to accept connections */
+    /* accepting connections */
     err = listen(fd, LISTEN_QUEUE_LENGTH);   
     if (err < 0) {   
         fprintf(stderr, "listen():\n");   
