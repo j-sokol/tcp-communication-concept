@@ -19,7 +19,7 @@
 #define LEFT 103
 #define RIGHT 104
 
-int SRV_IP_PORT = 12019;
+int SRV_IP_PORT = 1337;
 int PASV_FD = -1;
 int DATACON_FD = -1;
 int PASV_DATACON_FD = -1;
