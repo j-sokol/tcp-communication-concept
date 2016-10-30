@@ -2,7 +2,7 @@
 
 TCP Server responding to given (and sometimes broken) client. Task for subject Computer Networks at Faculty of Information Technologies at CTU Prague.
 
-# more info about homework: #
+## more info about homework:  ##
 
 Robot moves across city. The city consists of 2-D panels with (x,y) coordinates. There are no physical obstacles in the city. The robot can go forth, turn to the left or pick up flag. It is also capable of informing about its city position.
 
